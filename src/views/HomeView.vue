@@ -43,6 +43,11 @@ export default {
 
 
 <style>
+*{
+  margin: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+}
   body{
     background-color: #1E1E1E;
     color: #FFFFFF;
@@ -59,10 +64,11 @@ export default {
     margin-left: 52px;
   }
   #Dashboard{
+    width: min-content;
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 13px 29px;
+    padding: 10px 29px;
     gap: 17px;
     border-radius:17px;
     background: linear-gradient(266.37deg, #FAFF00 -5.82%, #FAFF00 15.95%, #1970D6 41.2%, #6C1182 72.88%);
