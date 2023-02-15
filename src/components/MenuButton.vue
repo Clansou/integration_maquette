@@ -7,7 +7,7 @@ export default {
 <template>
   <div class="MenuButton">
     <img :src="img" alt=''>
-    <p>{{ text }}</p>
+    <a>{{ text }}</a>
   </div>
 </template>
 

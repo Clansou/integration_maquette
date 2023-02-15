@@ -1,10 +1,12 @@
 <script>
 // @ is an alias to /src
 import MenuButton from '@/components/MenuButton.vue';
+import TransactionComponent from '@/components/TransactionComponent.vue';
 export default {
   name: 'HomeView',
   components: {
-    MenuButton
+    MenuButton,
+    TransactionComponent
   },
 }
 </script>
@@ -12,10 +14,10 @@ export default {
 <template>
   <aside>
     <img id="Logo" src="../../public/image/Logo.png" alt="Logo">
-    <div id="Dashboard">
+    <button id="Dashboard">
       <img src="../../public/image/Icone/Dashboard.png" alt="">
       <p>Dashboard</p>
-    </div>
+    </button>
     <div id="Menu">
       <MenuButton img="image/Icone/Invoices.png" text="InVoices" />
       <MenuButton img="image/Icone/Clients.png" text="Clients" />
@@ -43,12 +45,14 @@ export default {
         <p>$40,123.56</p>
       </div>
       <nav>
-        <p class="active">Portfolio</p>
-        <p>Funding</p>
-        <p>Assets</p>
-        <p>P2P</p>
+        <a class="active">Portfolio</a>
+        <a>Funding</a>
+        <a>Assets</a>
+        <a>P2P</a>
       </nav>
     </div>
+    <img src="../../public/image/Graphique.png" alt="">
+    <TransactionComponent img="image/Icone/Help.png" subimg="image/Icone/Help.png" name="Bitcoin" subname="BTC"/>
   </main>
 </template>
 
@@ -84,6 +88,7 @@ export default {
     border-radius:17px;
     background: linear-gradient(266.37deg, #FAFF00 -5.82%, #FAFF00 15.95%, #1970D6 41.2%, #6C1182 72.88%);
     margin-bottom: 44px;
+    border: 0;
   }
   #Dashboard>p{
     font-weight: 400;
@@ -96,9 +101,38 @@ export default {
     
   }
   .logout{
-    position: relative;
+    position: absolute;
     bottom: 0;
   }
+
+
+
+  header{
+    margin-top: 8px;
+    display: flex;
+    gap: 24px;
+    height: 6vh;
+  }
+  h1{
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 52px;
+    width: 40%;
+  }
+  #search{
+    display: flex;
+
+    flex-direction: row;
+    align-items: center;
+    padding-left: 24px;
+    width: 60%;
+    gap: 10px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    color: #000;
+    }
+
+
 
 
   .InfoGraph{
@@ -112,6 +146,12 @@ export default {
     flex-direction: column;
     margin-left: 16px;
     gap: 16px;
+  }
+  .InfoGraph>div>p:nth-child(1){
+    opacity: 0.8;
+  }
+  .InfoGraph>div>p:nth-child(3){
+    opacity: 0.7;
   }
   #BTC{
     font-size: 29px;
@@ -145,28 +185,7 @@ export default {
     background: #0D0C0C;
     border-radius: 17px;
   }
-  header{
-    margin-top: 8px;
-    display: flex;
-    gap: 24px;
-    height: 6vh;
+  main>img{
+    margin-top: 42px;
   }
-  h1{
-    font-weight: 500;
-    font-size: 35px;
-    line-height: 52px;
-    width: 40%;
-  }
-  #search{
-    display: flex;
-
-    flex-direction: row;
-    align-items: center;
-    padding-left: 24px;
-    width: 60%;
-    gap: 10px;
-    background: #FFFFFF;
-    border-radius: 15px;
-    color: #000;
-    }
 </style>
