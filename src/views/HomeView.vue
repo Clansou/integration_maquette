@@ -28,17 +28,28 @@ export default {
     
   </aside>
   
-  
-  <div>
-
-  </div>
-  <!-- <header>
+  <main>
+    <header>
       <h1>Hi, Rogers</h1>
       <div id="search">
         <img src="../../public/image/Icone/Search.png" alt="">
         <p>Search</p>
       </div>
-  </header> -->
+    </header>
+    <div class="InfoGraph">
+      <div>
+        <p>Total Balance</p>
+        <div id="BTC"><p>0.97894652</p><p class="BTC_Text">BTC</p></div>
+        <p>$40,123.56</p>
+      </div>
+      <nav>
+        <p class="active">Portfolio</p>
+        <p>Funding</p>
+        <p>Assets</p>
+        <p>P2P</p>
+      </nav>
+    </div>
+  </main>
 </template>
 
 
@@ -88,29 +99,71 @@ export default {
     position: relative;
     bottom: 0;
   }
-  header{
-    display: flex;
-    margin-left: 12px;
-    margin-top: 30px;
-    align-items: center;
-    justify-content: space-between;
-    width: 70%;
-    height: 93px;
+
+
+  .InfoGraph{
+    margin-top: 54px;
+    display: grid;
+    grid-template-columns: 3fr 5fr;
   }
-  header>img{
-    margin-bottom: 10px;
+  .InfoGraph>div{
+    display: flex;
+    font-size: 22px;
+    flex-direction: column;
+    margin-left: 16px;
+    gap: 16px;
+  }
+  #BTC{
+    font-size: 29px;
+    display: flex;
+    gap: 8px;
+    color: #FFFFFF;
+    align-items: center;
+  }
+  .BTC_Text{
+    color: #000;
+    font-size: 15px;
+    padding: 4px 8px;
+    background: #FAFF00;
+    border-radius: 8px;;
+  }
+  .InfoGraph>nav{
+    display: flex;
+    gap: 16px;
+    padding: 8px 16px;
+    background: #292727;
+    border-radius: 17px;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 22px;
+  }
+  .InfoGraph>nav>.active{
+    padding: 8px 24px;
+    background: #0D0C0C;
+    border-radius: 17px;
+  }
+  header{
+    margin-top: 8px;
+    display: flex;
+    gap: 24px;
+    height: 6vh;
   }
   h1{
     font-weight: 500;
     font-size: 35px;
     line-height: 52px;
+    width: 40%;
   }
   #search{
     display: flex;
-    width: 37%;
+
     flex-direction: row;
     align-items: center;
     padding-left: 24px;
+    width: 60%;
     gap: 10px;
     background: #FFFFFF;
     border-radius: 15px;
