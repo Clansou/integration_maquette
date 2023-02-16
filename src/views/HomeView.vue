@@ -19,7 +19,7 @@ export default {
       <p>Dashboard</p>
     </button>
     <div id="Menu">
-      <MenuButton img="image/Icone/Invoices.png" text="InVoices" />
+      <MenuButton img="image/Icone/Invoices.png" text="Invoices" />
       <MenuButton img="image/Icone/Clients.png" text="Clients" />
       <MenuButton img="image/Icone/Products.png" text="Products" />
       <MenuButton img="image/Icone/Messages.png" text="Messages" />
@@ -35,7 +35,7 @@ export default {
       <h1>Hi, Rogers</h1>
       <div id="search">
         <img src="../../public/image/Icone/Search.png" alt="">
-        <p>Search</p>
+        <input placeholder="Search">
       </div>
     </header>
     <div class="InfoGraph">
@@ -51,8 +51,16 @@ export default {
         <a>P2P</a>
       </nav>
     </div>
+    
     <img src="../../public/image/Graphique.png" alt="">
-    <TransactionComponent img="image/Icone/Help.png" subimg="image/Icone/Help.png" name="Bitcoin" subname="BTC"/>
+    <div id="Transactiondiv">
+      <div>
+        <p>Recent Transactions </p>
+        <a>See all coins</a>
+      </div>
+      <TransactionComponent img="image/Crypto/Bitcoin3.png" subimg="image/transactionCurve1.png" name="Bitcoin" subname="BTC" activeColor1="blue" activeColor2="green"/>
+      <TransactionComponent img="image/Crypto/Etherum2.png" subimg="image/transactionCurve2.png" name="Etherum" subname="ETH" activeColor1="purple" activeColor2="red"/>
+    </div>
   </main>
 </template>
 
@@ -62,10 +70,14 @@ export default {
   margin: 0px;
   box-sizing: border-box;
   padding: 0px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+
 }
   body{
     background-color: #1E1E1E;
     color: #FFFFFF;
+    font-size: 22px;
+    
   }
   #app{
     display: grid;
@@ -77,6 +89,7 @@ export default {
   }
   #app>aside{
     margin-left: 52px;
+    position: relative;
   }
   #Dashboard{
     width: min-content;
@@ -102,7 +115,7 @@ export default {
   }
   .logout{
     position: absolute;
-    bottom: 0;
+    bottom: 12px;
   }
 
 
@@ -131,6 +144,14 @@ export default {
     border-radius: 15px;
     color: #000;
     }
+  #search>input{
+    border: 0;
+    font-size: 22px;
+  }
+  #search ::placeholder{
+    opacity: 1;
+    color: #000;
+  }
 
 
 
@@ -155,6 +176,7 @@ export default {
   }
   #BTC{
     font-size: 29px;
+
     display: flex;
     gap: 8px;
     color: #FFFFFF;
@@ -186,6 +208,22 @@ export default {
     border-radius: 17px;
   }
   main>img{
+    width: 100%;
     margin-top: 42px;
+  }
+
+  #Transactiondiv{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-left: 12px;
+    margin-top: 24px;
+  }
+  #Transactiondiv>div{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
   }
 </style>
