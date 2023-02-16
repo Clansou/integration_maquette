@@ -62,6 +62,12 @@ export default {
       <TransactionComponent img="image/Crypto/Etherum2.png" subimg="image/transactionCurve2.png" name="Etherum" subname="ETH" activeColor1="purple" activeColor2="red"/>
     </div>
   </main>
+  <aside>
+    <div id="profil">
+      <img src="../../public/image/Icone/Notification.png" alt="">
+      <img src="../../public/image/Profil.png" alt="">
+    </div>
+  </aside>
 </template>
 
 
@@ -87,8 +93,9 @@ export default {
   #Logo{
     margin-bottom: 128px;
   }
-  #app>aside{
-    margin-left: 52px;
+  aside{
+    margin-right: 40px;
+    margin-left: 40px;
     position: relative;
   }
   #Dashboard{
@@ -226,4 +233,21 @@ export default {
     margin-left: auto;
     margin-right: auto;
   }
+
+
+
+
+
+  #profil{
+    display: flex;
+  }
+  #profil>img{
+    height: fit-content;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  #profil :nth-child(2){
+    margin-left: auto;
+  }
+  
 </style>
