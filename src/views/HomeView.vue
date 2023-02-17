@@ -3,12 +3,14 @@
 import MenuButton from '@/components/MenuButton.vue';
 import TransactionComponent from '@/components/TransactionComponent.vue';
 import TransactionAsideComponent from '@/components/TransactionAsideComponent.vue';
+import AssetsComponent from '@/components/AssetsComponent.vue';
 export default {
   name: 'HomeView',
   components: {
     MenuButton,
     TransactionComponent,
-    TransactionAsideComponent
+    TransactionAsideComponent,
+    AssetsComponent,
   },
 }
 </script>
@@ -78,6 +80,10 @@ export default {
       <TransactionAsideComponent img="image/Crypto/Etherum.png" name="Etherum" state="Received" price="+ 1.646" date="Today, 10:02 am" activeColor1="green"/>
     </div>
     <p>Assets</p>
+    <div id="Assets">
+      <AssetsComponent color="white" img="image/Crypto/Bitcoin2.png" name="Bitcoin" quantity="121,6450.45" subname="BTC" background="linear-gradient(98.73deg, #611D8D 35.75%, #2F7EC1 73.26%)"/>
+      <AssetsComponent color="black" img="image/Crypto/Etherum2.png" name="Etherum" quantity="143,850.45" subname="ETH" background="linear-gradient(99.56deg, #FAFF00 35.82%, #29ABE2 64.75%, rgba(255, 255, 255, 0.7) 91.33%)"/>
+    </div>
   </aside>
 </template>
 
@@ -252,7 +258,7 @@ export default {
 
   #profil{
     display: flex;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
   }
   #profil>img{
     height: fit-content;
@@ -262,15 +268,21 @@ export default {
   #profil :nth-child(2){
     margin-left: auto;
   }
+  
 
   aside>p{
-    margin-bottom: 32px;
+    margin-bottom: 16px;
   }
   #TransactionAside{
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    margin-bottom: 32px;
+    margin-bottom: 60px;
+  }
+  #Assets{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 18px;
   }
   
 </style>
