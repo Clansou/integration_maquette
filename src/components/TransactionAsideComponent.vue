@@ -39,7 +39,7 @@ export default {
     }
     @media (max-width: 400px) {
         .transactionasidediv{
-            grid-template-columns: 2fr 2fr;
+            grid-template-columns: 1fr 2fr;
         }
         .transactionasidediv div:nth-child(2){
             display: none;

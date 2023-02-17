@@ -455,7 +455,19 @@ export default {
       margin-left: 12px !important;
       margin-right: 12px !important;
     }
+    #profil2{
+      margin-left: 12px !important;
+      margin-right: 12px !important;
+    }
+    #Aside1{
+      width: 100%;
+    }
     
+  }
+  @media (max-width: 400px) {
+    #Transactiondiv :nth-child(1){
+      flex-direction: column;
+    }
   }
    
 
