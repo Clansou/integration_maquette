@@ -12,12 +12,36 @@ export default {
     TransactionAsideComponent,
     AssetsComponent,
   },
+  mounted(){
+    var sidenav = document.getElementById("Aside1");
+    var openBtn = document.getElementById("openBtn");
+    var closeBtn = document.getElementById("closeBtn");
+
+    openBtn.onclick = openNav;
+    closeBtn.onclick = closeNav;
+
+    /* Set the width of the side navigation to 250px */
+    function openNav() {
+      sidenav.classList.add("active");
+    }
+
+    /* Set the width of the side navigation to 0 */
+    function closeNav() {
+      sidenav.classList.remove('active');
+    }
+  }
 }
 </script>
 
 <template>
-  <aside>
+  
+  <aside id="Aside1">
+    <a id="closeBtn" href="#" class="close">×</a>
     <img id="Logo" src="../../public/image/Logo.png" alt="Logo">
+    <div id="profil2">
+      <img src="../../public/image/Icone/Notification.png" alt="">
+      <img src="../../public/image/Profil.png" alt="">
+    </div>
     <button id="Dashboard">
       <img src="../../public/image/Icone/Dashboard.png" alt="">
       <p>Dashboard</p>
@@ -66,18 +90,18 @@ export default {
       <TransactionComponent img="image/Crypto/Etherum2.png" subimg="image/transactionCurve2.png" name="Etherum" subname="ETH" activeColor1="purple" activeColor2="red"/>
     </div>
   </main>
-  <aside>
-    <div id="profil">
+  <aside id="Aside2">
+    <div id="profil1">
       <img src="../../public/image/Icone/Notification.png" alt="">
       <img src="../../public/image/Profil.png" alt="">
     </div>
     <p>Recent Transactions</p>
     <div id="TransactionAside">
-      <TransactionAsideComponent img="image/Crypto/Usdt.png" name="Usdt" state="Received" price="+ 3,546" date="Today, 13:45 pm" activeColor1="green"/>
-      <TransactionAsideComponent img="image/Crypto/BNB.png" name="BNB" state="Buy" price="+ 0.7546" date="Today, 5:45 am" activeColor1="green"/>
-      <TransactionAsideComponent img="image/Crypto/LiteCoin.png" name="LiteCoin" state="Received" price="+ 0.7546" date="Today 7:55 am" activeColor1="red"/>
-      <TransactionAsideComponent img="image/Crypto/Bitcoin.png" name="Bitcoin" state="Received" price="+ 2.7546" date="Today, 8:55 am" activeColor1="green"/>
-      <TransactionAsideComponent img="image/Crypto/Etherum.png" name="Etherum" state="Received" price="+ 1.646" date="Today, 10:02 am" activeColor1="green"/>
+      <TransactionAsideComponent img="image/Crypto/Usdt.png" name="Usdt" state="Received" price="+ 3,546" date="Today, 13:45 " activeColor1="green"/>
+      <TransactionAsideComponent img="image/Crypto/BNB.png" name="BNB" state="Buy" price="+ 0.7546" date="Today, 5:45 " activeColor1="green"/>
+      <TransactionAsideComponent img="image/Crypto/LiteCoin.png" name="LiteCoin" state="Received" price="+ 0.7546" date="Today 7:55 " activeColor1="red"/>
+      <TransactionAsideComponent img="image/Crypto/Bitcoin.png" name="Bitcoin" state="Received" price="+ 2.7546" date="Today, 8:55 " activeColor1="green"/>
+      <TransactionAsideComponent img="image/Crypto/Etherum.png" name="Etherum" state="Received" price="+ 1.646" date="Today, 10:02 " activeColor1="green"/>
     </div>
     <p>Assets</p>
     <div id="Assets">
@@ -85,6 +109,13 @@ export default {
       <AssetsComponent color="black" img="image/Crypto/Etherum2.png" name="Etherum" quantity="143,850.45" subname="ETH" background="linear-gradient(99.56deg, #FAFF00 35.82%, #29ABE2 64.75%, rgba(255, 255, 255, 0.7) 91.33%)"/>
     </div>
   </aside>
+  <a href="#" id="openBtn">
+    <span class="burger-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+  </a>
 </template>
 
 
@@ -111,8 +142,8 @@ export default {
     margin-bottom: 128px;
   }
   aside{
-    margin-right: 40px;
-    margin-left: 40px;
+    margin-right: 24px;
+    margin-left: 24px;
     position: relative;
   }
   #Dashboard{
@@ -141,6 +172,30 @@ export default {
     position: absolute;
     bottom: 12px;
   }
+
+  #Aside1.active {
+  display: block;
+  left: 0;
+}
+
+#Aside1 .close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 36px;
+}
+.burger-icon span {
+  display: block;
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+#openBtn{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
 
 
 
@@ -244,7 +299,7 @@ export default {
     margin-left: 12px;
     margin-top: 24px;
   }
-  #Transactiondiv>div{
+  #Transactiondiv> :nth-child(1){
     width: 90%;
     display: flex;
     justify-content: space-between;
@@ -255,17 +310,19 @@ export default {
 
 
 
-
-  #profil{
+  #profil2{
+    display: none;
+  }
+  #profil1{
     display: flex;
     margin-bottom: 60px;
   }
-  #profil>img{
+  #profil1>img{
     height: fit-content;
     margin-top: auto;
     margin-bottom: auto;
   }
-  #profil :nth-child(2){
+  #profil1 :nth-child(2){
     margin-left: auto;
   }
   
@@ -284,5 +341,79 @@ export default {
     justify-content: space-around;
     gap: 18px;
   }
+
+
+  @media (max-width: 1400px) { 
+    #Aside1{
+      display: none;
+    }
+    #app{
+      grid-template-columns: 7fr 4fr;
+    }
+    h1{
+      margin-left: 12px;
+    }
+    #Aside1{
+      position: fixed;
+      top: 0;
+      background-color: #000;
+      margin: 0;
+      height: 100vh;
+      z-index: 10;
+    }
+    #Dashboard{
+      margin-left: 12px;
+      margin-right: 12px;
+    }
+   }
+   @media (max-width: 1000px) {
+    #app{
+      grid-template-columns: 1fr;
+      margin: 0 24px;
+    }
+    #profil1{
+      display: none;
+    }
+    #profil2{
+      display: block;
+    }
+    #profil2{
+    display: flex;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 60px;
+    }
+    #profil2>img{
+      height: fit-content;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    #profil2 :nth-child(2){
+      margin-left: auto;
+    }
+    #Logo{
+      margin-bottom: 30px;
+    }
+    #Assets{
+      flex-direction: row;
+    }
+    main{
+      margin-right: 24px;
+    }
+    #TransactionAside>div>div{
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #TransactionAside>div>img{
+      margin-left: 40px
+    }
+    aside>p{
+    margin-top: 32px;
+    margin-bottom: 32px;
+    }
+
+   }
+
+
   
 </style>

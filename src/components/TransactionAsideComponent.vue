@@ -21,7 +21,7 @@ export default {
 <style scoped>
     .transactionasidediv{
         display: grid;
-        grid-template-columns: 2fr 5fr 5fr;
+        grid-template-columns: 2fr 3fr 5fr;
         align-items: center;
         padding: 8px;
         gap: 16px;
@@ -37,4 +37,5 @@ export default {
     .transactionasidediv div :nth-child(2){
         opacity: 0.7;
     }
+    
 </style>

@@ -32,5 +32,11 @@ export default {
         justify-content: space-between;
         padding: 0 12px;
     }
+    @media (max-width: 1000px) {
+        .asset{
+            padding: 20px 48px;
+            margin-bottom: 12px;
+        }
+    }
 
 </style>

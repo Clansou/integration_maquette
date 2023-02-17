@@ -55,6 +55,16 @@ export default {
 .transaction :nth-child(2) :nth-child(2){
     opacity: 0.7;
 }
+@media (max-width: 800px) {
+        .transaction{
+            margin-left: auto;
+            margin-right: auto;
+            width: 85%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+    }
 
 
 
