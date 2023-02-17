@@ -71,8 +71,13 @@ export default {
     </div>
     <p>Recent Transactions</p>
     <div id="TransactionAside">
-      <TransactionAsideComponent img="image/Crypto/Usdt.png" name="Usdt" state="Received" price="+$3,546" date="Today, 13:45 pm" activeColor1="green"/>
+      <TransactionAsideComponent img="image/Crypto/Usdt.png" name="Usdt" state="Received" price="+ 3,546" date="Today, 13:45 pm" activeColor1="green"/>
+      <TransactionAsideComponent img="image/Crypto/BNB.png" name="BNB" state="Buy" price="+ 0.7546" date="Today, 5:45 am" activeColor1="green"/>
+      <TransactionAsideComponent img="image/Crypto/LiteCoin.png" name="LiteCoin" state="Received" price="+ 0.7546" date="Today 7:55 am" activeColor1="red"/>
+      <TransactionAsideComponent img="image/Crypto/Bitcoin.png" name="Bitcoin" state="Received" price="+ 2.7546" date="Today, 8:55 am" activeColor1="green"/>
+      <TransactionAsideComponent img="image/Crypto/Etherum.png" name="Etherum" state="Received" price="+ 1.646" date="Today, 10:02 am" activeColor1="green"/>
     </div>
+    <p>Assets</p>
   </aside>
 </template>
 
@@ -262,7 +267,10 @@ export default {
     margin-bottom: 32px;
   }
   #TransactionAside{
-    gap: 24px
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 32px;
   }
   
 </style>

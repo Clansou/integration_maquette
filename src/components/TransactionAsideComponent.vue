@@ -20,8 +20,11 @@ export default {
 
 <style scoped>
     .transactionasidediv{
-        display: flex;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: 2fr 5fr 5fr;
+        align-items: center;
+        padding: 8px;
+        gap: 16px;
         font-size: 19px;
 
     }
