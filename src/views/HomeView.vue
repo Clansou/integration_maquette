@@ -2,11 +2,13 @@
 // @ is an alias to /src
 import MenuButton from '@/components/MenuButton.vue';
 import TransactionComponent from '@/components/TransactionComponent.vue';
+import TransactionAsideComponent from '@/components/TransactionAsideComponent.vue';
 export default {
   name: 'HomeView',
   components: {
     MenuButton,
-    TransactionComponent
+    TransactionComponent,
+    TransactionAsideComponent
   },
 }
 </script>
@@ -67,6 +69,10 @@ export default {
       <img src="../../public/image/Icone/Notification.png" alt="">
       <img src="../../public/image/Profil.png" alt="">
     </div>
+    <p>Recent Transactions</p>
+    <div id="TransactionAside">
+      <TransactionAsideComponent img="image/Crypto/Usdt.png" name="Usdt" state="Received" price="+$3,546" date="Today, 13:45 pm" activeColor1="green"/>
+    </div>
   </aside>
 </template>
 
@@ -76,7 +82,7 @@ export default {
   margin: 0px;
   box-sizing: border-box;
   padding: 0px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Poppins";
 
 }
   body{
@@ -87,7 +93,7 @@ export default {
   }
   #app{
     display: grid;
-    grid-template-columns: 3fr 8fr 4fr ;
+    grid-template-columns: 3fr 8fr 5fr ;
     padding-top: 54px;
   }
   #Logo{
@@ -145,13 +151,14 @@ export default {
     flex-direction: row;
     align-items: center;
     padding-left: 24px;
-    width: 60%;
+    width: 50%;
     gap: 10px;
     background: #FFFFFF;
     border-radius: 15px;
     color: #000;
     }
   #search>input{
+    width: 100px;
     border: 0;
     font-size: 22px;
   }
@@ -240,6 +247,7 @@ export default {
 
   #profil{
     display: flex;
+    margin-bottom: 100px;
   }
   #profil>img{
     height: fit-content;
@@ -248,6 +256,13 @@ export default {
   }
   #profil :nth-child(2){
     margin-left: auto;
+  }
+
+  aside>p{
+    margin-bottom: 32px;
+  }
+  #TransactionAside{
+    gap: 24px
   }
   
 </style>
