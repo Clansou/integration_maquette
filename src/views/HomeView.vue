@@ -396,6 +396,7 @@ export default {
     }
     #Assets{
       flex-direction: row;
+      flex-wrap: wrap;
     }
     main{
       margin-right: 24px;
@@ -413,6 +414,50 @@ export default {
     }
 
    }
+   @media (max-width: 700px) {
+    .InfoGraph{
+      grid-template-columns: 1fr;
+    }
+    .InfoGraph>div{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 12px;
+      margin-bottom: 24px;
+    }
+   }
+   @media (max-width: 500px) {
+    #TransactionAside>div>img {
+      margin-left: 0;
+    }
+    header{
+      flex-direction: column;
+      height: auto;
+    }
+    h1{
+      width: auto;
+    }
+    #search{
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 12px ;
+    }
+    nav{
+      flex-wrap: wrap;
+    }
+    div,header,aside{
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+    body{
+      margin-left: 12px !important;
+      margin-right: 12px !important;
+    }
+    
+  }
+   
 
 
   

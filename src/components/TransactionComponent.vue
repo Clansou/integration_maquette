@@ -65,6 +65,22 @@ export default {
             grid-template-rows: 1fr 1fr;
         }
     }
+    @media (max-width: 500px) {
+        .transaction{
+            gap: 12px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+
+        }
+    }
+    @media (max-width: 400px) {
+        .transaction{
+            grid-template-columns: 1fr;
+        }
+        
+    }
+
+
 
 
 

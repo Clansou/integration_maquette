@@ -37,5 +37,14 @@ export default {
     .transactionasidediv div :nth-child(2){
         opacity: 0.7;
     }
+    @media (max-width: 400px) {
+        .transactionasidediv{
+            grid-template-columns: 2fr 2fr;
+        }
+        .transactionasidediv div:nth-child(2){
+            display: none;
+        }
+    }
+    
     
 </style>

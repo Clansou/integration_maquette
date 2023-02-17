@@ -38,5 +38,10 @@ export default {
             margin-bottom: 12px;
         }
     }
+    @media (max-width: 400px) {
+        .asset{
+            padding: 12px 24px;
+        }
+    }
 
 </style>
