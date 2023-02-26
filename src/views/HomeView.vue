@@ -127,6 +127,9 @@ export default {
   font-family: "Poppins";
 
 }
+#closeBtn{
+  display: none;
+}
   body{
     background-color: #1E1E1E;
     color: #FFFFFF;
@@ -192,6 +195,7 @@ export default {
   margin: 6px 0;
 }
 #openBtn{
+  display: none;
   position: absolute;
   top: 10px;
   left: 10px;
@@ -347,6 +351,15 @@ export default {
     #Aside1{
       display: none;
     }
+    #openBtn{
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+  #closeBtn{
+  display: block;
+  }
     #app{
       grid-template-columns: 7fr 4fr;
     }
