@@ -39,11 +39,11 @@ export default {
     <a id="closeBtn" href="#" class="close">×</a>
     <img id="Logo" src="../../public/image/Logo.png" alt="Logo">
     <div id="profil2">
-      <img src="../../public/image/Icone/Notification.png" alt="">
+      <img src="../../public/image/Notification.png" alt="">
       <img src="../../public/image/Profil.png" alt="">
     </div>
     <button id="Dashboard">
-      <img src="../../public/image/Icone/Dashboard.png" alt="">
+      <img src="../../public/image/Dashboard.png" alt="">
       <p>Dashboard</p>
     </button>
     <div id="Menu">
@@ -62,7 +62,7 @@ export default {
     <header>
       <h1>Hi, Rogers</h1>
       <div id="search">
-        <img src="../../public/image/Icone/Search.png" alt="">
+        <img src="../../public/image/Search.png" alt="">
         <input placeholder="Search">
       </div>
     </header>
