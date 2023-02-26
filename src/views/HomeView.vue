@@ -92,7 +92,7 @@ export default {
   </main>
   <aside id="Aside2">
     <div id="profil1">
-      <img src="../../public/image/Icone/Notification.png" alt="">
+      <img src="../../public/image/Notification.png" alt="">
       <img src="../../public/image/Profil.png" alt="">
     </div>
     <p>Recent Transactions</p>
